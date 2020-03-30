@@ -13,7 +13,7 @@ namespace Automapper.Example
 
             var mapper = configuration.CreateMapper();
 
-            var addMovieRequest = new AddMovieRequest() { Title = "title", Artist = "ABCD", MoviePremiere = "01/10/2010" };
+            var addMovieRequest = new AddMovieRequest() { Title = "title", Artist = "ABCD", MoviePremiere = "10, 12,;; 2020" };
             var movie = mapper.Map<Movie>(addMovieRequest);
 
         }

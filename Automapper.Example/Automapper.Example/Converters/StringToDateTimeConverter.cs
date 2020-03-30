@@ -9,7 +9,7 @@ namespace Automapper.Example.Converters
     {
         public DateTime Convert(string source, DateTime destination, ResolutionContext context)
         {
-            return System.Convert.ToDateTime(source);
+            return DateTime.ParseExact(source, "dd, MM,;; yyyy", null);
         }
     }
 }
