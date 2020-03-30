@@ -4,12 +4,11 @@ using System.Text;
 
 namespace Automapper.Example.Model
 {
-    public class Movie
+    public class AddMovieRequest
     {
-        public string Id { get; set; }
-        public Guid ExternalId { get; set; }
         public string Title { get; set; }
         public string Artist { get; set; }
-        public DateTime MoviePremiere { get; set; }
+
+        public string MoviePremiere { get; set; }
     }
 }

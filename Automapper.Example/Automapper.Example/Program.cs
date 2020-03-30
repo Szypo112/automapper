@@ -13,11 +13,8 @@ namespace Automapper.Example
 
             var mapper = configuration.CreateMapper();
 
-            var movie = new Movie() { ExternalId = new Guid(), Artist = "Art Artis", Title = "Title" };
-
-            var movieDto = mapper.Map<MovieDto>(movie);
-
-            var movieAgain = mapper.Map<Movie>(movieDto);
+            var addMovieRequest = new AddMovieRequest() { Title = "title", Artist = "ABCD", MoviePremiere = "01/10/2010" };
+            var movie = mapper.Map<Movie>(addMovieRequest);
 
         }
     }
