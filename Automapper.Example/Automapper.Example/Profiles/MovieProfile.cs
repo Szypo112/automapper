@@ -20,7 +20,8 @@ namespace Automapper.Example.Profiles
 
             CreateMap<AddMovieRequest, Movie>()
                 .ForMember(dst => dst.MoviePremiere,
-                opt => opt.ConvertUsing(new StringToDateTimeValueConverter(), src=> src.MoviePremiere));
+                opt => opt.ConvertUsing(new StringToDateTimeValueConverter(), src=> src.MoviePremiere))
+                .ForMember(dst => dst.Artist, opt => opt.MapFrom<ArtistValueResolver>());
 
             CreateMap<AddMovieRequestTwo, Movie>();
         }
